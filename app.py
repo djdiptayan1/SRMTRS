@@ -36,8 +36,14 @@ def faculty_card(faculty, col):
 
 
 st.set_page_config(page_title="Know Your Enemy", layout="wide")
-st.title("Know your Enemy 🔍")
-st.header("Search for any SRM Faculty")
+st.markdown(
+    "<h1 style='text-align: center;'>Know your Enemy 🔍</h1>", unsafe_allow_html=True
+)
+st.markdown(
+    "<h2 style='text-align: center;'>Search for any SRM Faculty</h2>",
+    unsafe_allow_html=True,
+)
+
 
 name = st.text_input("Enter the name of the faculty", placeholder="e.g., John Doe")
 
