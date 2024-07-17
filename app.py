@@ -25,8 +25,8 @@ def faculty_card(faculty, col):
         with container:
             try:
                 st.image(faculty["ImageURL"], use_column_width=True)
-            except URLError:
-                st.image("/avater.png", use_column_width=True)
+            except:
+                st.image("./avater.png", use_column_width=True)
             st.header(f"**Name:** {faculty['FacultyName']}")
             st.write(f"**Department:** {faculty['DepartmentName']}")
             st.write(f"**Designation:** {faculty['Designation']}")
