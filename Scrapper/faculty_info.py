@@ -49,7 +49,7 @@ def read_departments_from_excel(file_path):
 
 
 def main():
-    departments = read_departments_from_excel("SRM_Departments.xlsx")
+    departments = read_departments_from_excel("../data/SRM_Departments.xlsx")
 
     faculties_data = []
 
@@ -89,7 +89,6 @@ def main():
                         }
                     )
 
-                # Check for next page
                 pagination_links = soup.find("div", class_="pagination-link")
                 if pagination_links:
                     next_page = pagination_links.find(
@@ -106,7 +105,7 @@ def main():
                     f"Failed to fetch data for Department: {department_name} ({department_code})"
                 )
 
-    json_file_path = "faculties_data.json"
+    json_file_path = "faculties_data_new.json"
     with open(json_file_path, "w", encoding="utf-8") as json_file:
         json.dump(faculties_data, json_file, ensure_ascii=False, indent=4)
 
