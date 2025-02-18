@@ -5,7 +5,7 @@ from profilePage import profilePage  # Importing the profile function
 
 # Load faculty data from JSON file
 def load_faculty_data():
-    with open("../data/faculties_data.json", "r") as file:
+    with open("../data/faculties_data_new.json", "r") as file:
         data = json.load(file)
     return data
 
